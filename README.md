@@ -1,151 +1,81 @@
-# Handwritten Digit Recognition using Artificial Neural Networks (ANN)
+# ✍️ Handwritten Digit Recognition using Artificial Neural Networks
+
+A handwritten digit recognition system built using an **Artificial Neural Network (ANN)** with **TensorFlow/Keras**. The model is trained on the **MNIST handwritten digit dataset** to classify images of digits from **0 to 9**.
+
+---
 
 ## 📌 Overview
 
-This project implements a Handwritten Digit Recognition system using an Artificial Neural Network (ANN) built with TensorFlow/Keras. The model is trained on the MNIST dataset to classify handwritten digits (0–9).
+This project demonstrates an end-to-end image classification workflow using a feed-forward neural network.
 
-This project was developed as part of AI-ML Assignment 8.
+The model processes handwritten digit images, learns patterns from pixel values, and predicts the corresponding digit class.
 
 ---
 
-## 🎯 Objective
+## 🎯 Objectives
 
 - Load and explore the MNIST dataset.
-- Perform data preprocessing.
-- Build an Artificial Neural Network.
-- Train the model using TensorFlow/Keras.
-- Evaluate model performance using accuracy, confusion matrix, and classification report.
-- Visualize training accuracy and loss.
+- Perform data preprocessing and normalization.
+- Prepare labels using one-hot encoding.
+- Build an Artificial Neural Network using TensorFlow/Keras.
+- Train the model for 10 epochs.
+- Evaluate classification performance.
+- Analyze model performance using accuracy, loss, confusion matrix, and classification metrics.
 
 ---
 
-## 📂 Dataset
+## 📊 Dataset
 
-**Dataset:** MNIST Handwritten Digits Dataset
+### MNIST Handwritten Digits Dataset
 
-Kaggle:
+The project uses the **MNIST dataset**, containing grayscale images of handwritten digits from **0 to 9**.
+
+The dataset is not included in this repository.
+
+**Dataset source:**  
 https://www.kaggle.com/datasets/oddrationale/mnist-in-csv
-
-> **Note:** The dataset is not included in this repository. Please download it from the above link.
-
----
-
-## 🛠️ Libraries Used
-
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- TensorFlow / Keras
-- Scikit-learn
-
----
-
-## ⚙️ Methodology
-
-1. Load the dataset.
-2. Explore the dataset.
-3. Check for missing values.
-4. Separate features and labels.
-5. Normalize pixel values.
-6. Convert labels using One-Hot Encoding.
-7. Build an ANN consisting of:
-   - Input Layer
-   - Hidden Layer (128 neurons, ReLU)
-   - Hidden Layer (64 neurons, ReLU)
-   - Output Layer (10 neurons, Softmax)
-8. Train the model for 10 epochs.
-9. Evaluate the model.
-10. Visualize model performance.
 
 ---
 
 ## 🧠 Model Architecture
 
+The ANN consists of:
+
 | Layer | Configuration |
-|--------|---------------|
-| Input Layer | 784 Features |
-| Hidden Layer 1 | 128 Neurons (ReLU) |
-| Hidden Layer 2 | 64 Neurons (ReLU) |
-| Output Layer | 10 Neurons (Softmax) |
+|---|---|
+| Input Layer | 784 input features |
+| Hidden Layer 1 | 128 neurons, ReLU |
+| Hidden Layer 2 | 64 neurons, ReLU |
+| Output Layer | 10 neurons, Softmax |
 
-Optimizer:
-- Adam
+### Training Configuration
 
-Loss Function:
-- Categorical Crossentropy
+- **Optimizer:** Adam
+- **Loss Function:** Categorical Crossentropy
+- **Metric:** Accuracy
+- **Epochs:** 10
 
-Metric:
-- Accuracy
-
----
-
-## 📊 Results
-
-The ANN successfully classified handwritten digits from the MNIST dataset with high accuracy.
-
-Evaluation includes:
-
-- Test Accuracy
-- Confusion Matrix
-- Classification Report
-- Accuracy vs Epoch Graph
-- Loss vs Epoch Graph
+The 784 input features correspond to the flattened **28 × 28 pixel** representation of each MNIST image.
 
 ---
 
-## 📁 Project Structure
+## ⚙️ Methodology
 
-```
-Handwritten-Digit-Recognition-ANN/
-│
-├── data/
-│   ├── mnist_train.csv
-│   └── mnist_test.csv
-│
-├── images/
-│   ├── sample_digit.png
-│   ├── accuracy.png
-│   ├── loss.png
-│   └── confusion_matrix.png
-│
-├── Assignment-8.ipynb
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
-
----
-
-## 🚀 How to Run
-
-Clone the repository:
-
-```bash
-git clone <repository-url>
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run:
-
-```bash
-jupyter notebook Assignment-8.ipynb
-```
-
----
-
-## 📌 Conclusion
-
-Artificial Neural Networks are effective for handwritten digit recognition tasks. Hidden layers help the model learn complex patterns from image data, leading to high classification accuracy. Although ANNs require considerable computational resources and training data, they outperform many traditional machine learning techniques for image classification problems.
-
----
-
-## 👨‍💻 Author
-
-**Ayush Dev**
+```text
+MNIST Dataset
+      ↓
+Data Exploration
+      ↓
+Data Preprocessing
+      ↓
+Pixel Normalization
+      ↓
+One-Hot Encoding
+      ↓
+ANN Architecture
+      ↓
+Model Training
+      ↓
+Model Evaluation
+      ↓
+Performance Visualization
