@@ -1,52 +1,69 @@
 # ✍️ Handwritten Digit Recognition using Artificial Neural Networks
 
-A handwritten digit recognition system built using an **Artificial Neural Network (ANN)** with **TensorFlow/Keras**. The model is trained on the **MNIST handwritten digit dataset** to classify images of digits from **0 to 9**.
-
----
-
 ## 📌 Overview
 
-This project demonstrates an end-to-end image classification workflow using a feed-forward neural network.
+This project implements a handwritten digit recognition system using an Artificial Neural Network (ANN) built with TensorFlow/Keras.
 
-The model processes handwritten digit images, learns patterns from pixel values, and predicts the corresponding digit class.
+The model is trained on the MNIST handwritten digit dataset to classify images of digits from **0 to 9**.
 
 ---
 
-## 🎯 Objectives
+## 🎯 Objective
 
 - Load and explore the MNIST dataset.
-- Perform data preprocessing and normalization.
-- Prepare labels using one-hot encoding.
-- Build an Artificial Neural Network using TensorFlow/Keras.
-- Train the model for 10 epochs.
-- Evaluate classification performance.
-- Analyze model performance using accuracy, loss, confusion matrix, and classification metrics.
+- Preprocess and normalize image data.
+- Build an Artificial Neural Network.
+- Train the model using TensorFlow/Keras.
+- Evaluate the model using classification metrics and a confusion matrix.
+- Visualize training accuracy and loss.
 
 ---
 
 ## 📊 Dataset
 
-### MNIST Handwritten Digits Dataset
+**Dataset:** MNIST Handwritten Digits Dataset
 
-The project uses the **MNIST dataset**, containing grayscale images of handwritten digits from **0 to 9**.
+The dataset contains grayscale images of handwritten digits ranging from **0 to 9**.
 
-The dataset is not included in this repository.
+> The dataset is not included in this repository.
 
-**Dataset source:**  
-https://www.kaggle.com/datasets/oddrationale/mnist-in-csv
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- TensorFlow / Keras
+- Scikit-learn
+
+---
+
+## ⚙️ Methodology
+
+1. Load the MNIST dataset.
+2. Explore the dataset.
+3. Check for missing values.
+4. Separate features and labels.
+5. Normalize pixel values.
+6. Convert labels using one-hot encoding.
+7. Build the ANN architecture.
+8. Train the model for 10 epochs.
+9. Evaluate the model.
+10. Visualize training performance.
 
 ---
 
 ## 🧠 Model Architecture
 
-The ANN consists of:
-
 | Layer | Configuration |
 |---|---|
-| Input Layer | 784 input features |
-| Hidden Layer 1 | 128 neurons, ReLU |
-| Hidden Layer 2 | 64 neurons, ReLU |
-| Output Layer | 10 neurons, Softmax |
+| Input Layer | 784 Features |
+| Hidden Layer 1 | 128 Neurons — ReLU |
+| Hidden Layer 2 | 64 Neurons — ReLU |
+| Output Layer | 10 Neurons — Softmax |
 
 ### Training Configuration
 
@@ -55,27 +72,33 @@ The ANN consists of:
 - **Metric:** Accuracy
 - **Epochs:** 10
 
-The 784 input features correspond to the flattened **28 × 28 pixel** representation of each MNIST image.
+---
+
+## 📈 Results
+
+The project includes visualizations for evaluating the ANN:
+
+- Training Accuracy
+- Training Loss
+- Confusion Matrix
+- Sample Digit Prediction
+
+The model demonstrates the ability of a feed-forward neural network to learn patterns from handwritten digit images.
 
 ---
 
-## ⚙️ Methodology
+## 📂 Project Structure
 
 ```text
-MNIST Dataset
-      ↓
-Data Exploration
-      ↓
-Data Preprocessing
-      ↓
-Pixel Normalization
-      ↓
-One-Hot Encoding
-      ↓
-ANN Architecture
-      ↓
-Model Training
-      ↓
-Model Evaluation
-      ↓
-Performance Visualization
+Handwritten-Digit-Recognition-ANN/
+│
+├── images/
+│   ├── sample_digit.png
+│   ├── accuracy.png
+│   ├── loss.png
+│   └── confusion_matrix.png
+│
+├── handwritten_digit_recognition_ann.ipynb
+├── README.md
+├── requirements.txt
+└── .gitignore
